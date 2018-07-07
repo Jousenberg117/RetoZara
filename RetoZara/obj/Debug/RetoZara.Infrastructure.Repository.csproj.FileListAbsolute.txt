@@ -1,0 +1,7 @@
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\bin\Debug\RetoZara.exe.config
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\bin\Debug\RetoZara.exe
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\bin\Debug\RetoZara.pdb
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\obj\Debug\RetoZara.Infrastructure.Repository.csprojAssemblyReference.cache
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\obj\Debug\RetoZara.Infrastructure.Repository.csproj.CoreCompileInputs.cache
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\obj\Debug\RetoZara.exe
+C:\Users\jhoubbertM\source\repos\RetoZara\RetoZara\obj\Debug\RetoZara.pdb

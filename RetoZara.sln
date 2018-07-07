@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoZara", "RetoZara\RetoZara.csproj", "{60AE4167-7501-4026-81F2-70A06FFD0E12}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoZara.Infrastructure.Repository", "RetoZara\RetoZara.Infrastructure.Repository.csproj", "{60AE4167-7501-4026-81F2-70A06FFD0E12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C632F103-963A-455C-809C-675A8C749EC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
