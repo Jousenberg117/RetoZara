@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RetoZara
+namespace RetoZara.Common.Model
 {
-    class Program
+    public class Venta
     {
-        static void Main(string[] args)
-        {
-        }
+        public int valorVenta { get; set; }
     }
 }
