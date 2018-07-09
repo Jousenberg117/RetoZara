@@ -78,5 +78,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RetoZara.Common.Model\RetoZara.Common.Model.csproj">
+      <Project>{0b998837-1903-45e6-8753-28781b284292}</Project>
+      <Name>RetoZara.Common.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RetoZara.Infrastructure.Repository\RetoZara.Infrastructure.Repository.csproj">
+      <Project>{60ae4167-7501-4026-81f2-70a06ffd0e12}</Project>
+      <Name>RetoZara.Infrastructure.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RetoZara.Common.Model;
-using RetoZara.Infrastructure.Repository.Interfaces;
 
-namespace RetoZara.Infrastructure.Repository.Repository
+namespace RetoZara.Infrastructure.Repository.Interfaces
 {
-    public class VentaRepository : IVentaRepository
+    public interface IVentaRepository
     {
-
+        Venta Calcular(Venta venta);
     }
 }

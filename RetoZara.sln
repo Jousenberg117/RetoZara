@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoZara.Infrastructure.Repository", "RetoZara\RetoZara.Infrastructure.Repository.csproj", "{60AE4167-7501-4026-81F2-70A06FFD0E12}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C632F103-963A-455C-809C-675A8C749EC4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4D38C46F-CC84-4A36-9CE0-1F74AEDCCEDD}"
@@ -15,16 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoZara.Presentation.WinSite", "RetoZara.Presentation.WinSite\RetoZara.Presentation.WinSite.csproj", "{41D2C8BB-7825-4D01-84FC-FBC7C1449D41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetoZara.Infrastructure.Repository", "RetoZara.Infrastructure.Repository\RetoZara.Infrastructure.Repository.csproj", "{60AE4167-7501-4026-81F2-70A06FFD0E12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B998837-1903-45E6-8753-28781B284292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0B998837-1903-45E6-8753-28781B284292}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B998837-1903-45E6-8753-28781B284292}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,14 +29,18 @@ Global
 		{41D2C8BB-7825-4D01-84FC-FBC7C1449D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41D2C8BB-7825-4D01-84FC-FBC7C1449D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41D2C8BB-7825-4D01-84FC-FBC7C1449D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60AE4167-7501-4026-81F2-70A06FFD0E12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{60AE4167-7501-4026-81F2-70A06FFD0E12} = {4D38C46F-CC84-4A36-9CE0-1F74AEDCCEDD}
 		{0B998837-1903-45E6-8753-28781B284292} = {C632F103-963A-455C-809C-675A8C749EC4}
 		{41D2C8BB-7825-4D01-84FC-FBC7C1449D41} = {9F8D7CB8-F0E3-4B8A-8141-4C8DA97178E6}
+		{60AE4167-7501-4026-81F2-70A06FFD0E12} = {4D38C46F-CC84-4A36-9CE0-1F74AEDCCEDD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26A6EC66-1CC9-431E-ABB8-A373F11EBD90}

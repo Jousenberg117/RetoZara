@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RetoZara.Infrastructure.Repository.Facade;
+
 
 namespace RetoZara.Presentation.WinSite
 {
@@ -19,6 +21,9 @@ namespace RetoZara.Presentation.WinSite
         private void ButtonCalcular(object sender, EventArgs e)
         {
             Facade facade = new Facade();
+            decimal capitalFinal;
+            capitalFinal = facade.OperacionValorVenta();
+            MessageBox.Show("El capital final a vender con fecha 28/12/2017 fue:" + "  " + capitalFinal.ToString());
         }
     }
 }
