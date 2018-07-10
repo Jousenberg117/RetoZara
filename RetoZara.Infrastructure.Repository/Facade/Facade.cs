@@ -13,35 +13,29 @@ namespace RetoZara.Infrastructure.Repository.Facade
     {
         VentaRepository firstSubsystem = new VentaRepository();
         FileManager secondSubsystem = new FileManager();
-       
         decimal accionesTotalFinal;
         string viernesConsulta;
         decimal consultaValorCompra;
         decimal consultaValorVenta;
-        decimal capitalFinal;
-         DateTime dateValue = new DateTime(2001, 05, 23);
-         DateTime dateEnd= new DateTime(2017, 12, 01);
-         DateTime dateVenta = new DateTime(2017, 12, 28);
          public decimal  OperacionValorVenta()
         {
-            for (DateTime date = dateValue; date < dateEnd;)
+            for (DateTime date = Venta.dateValue; date < Venta.dateEnd;)
             {
                 OperacionFecha();
                 OperacionConsulta();
                 OperacionCompra();
-                dateValue = dateValue.AddMonths(1);
+                Venta.dateValue = Venta.dateValue.AddMonths(1);
                 date = date.AddMonths(1);
             }
             OperacionVenta();
-            return capitalFinal;
+            return Venta.capitalFinal;
          }
 
         public void OperacionFecha()
 
-        {
-            firstSubsystem.Viernes(dateValue);
-            dateValue = firstSubsystem.viernesdate;
-            viernesConsulta = firstSubsystem.viernesfecha;
+        {           
+            Venta.dateValue = firstSubsystem.Viernes(Venta.dateValue);
+            viernesConsulta = firstSubsystem.Viernes(Venta.dateValue).ToString("dd-MMM-yyyy").Replace(".", "");
         }
         public void OperacionConsulta()
 
@@ -53,17 +47,15 @@ namespace RetoZara.Infrastructure.Repository.Facade
         public void OperacionCompra()
 
         {
-            firstSubsystem.Acciones(consultaValorCompra);
-            accionesTotalFinal = firstSubsystem.AccionesTotal;
+            accionesTotalFinal = firstSubsystem.Acciones(consultaValorCompra);
         }
-        public decimal OperacionVenta()
+        public void OperacionVenta()
 
         {
-            secondSubsystem.consultaFechaVenta(dateVenta.ToString("dd-MMM-yyyy").Replace(".", ""));
+            secondSubsystem.consultaFechaVenta(Venta.dateVenta.ToString("dd-MMM-yyyy").Replace(".", ""));
             consultaValorVenta = Convert.ToDecimal(secondSubsystem.consultaValorVenta.Replace(".", ","));
             consultaValorVenta = Math.Round(consultaValorVenta, 3);
-            capitalFinal = firstSubsystem.CalcularVenta(consultaValorVenta, accionesTotalFinal);
-            return capitalFinal;
+            firstSubsystem.CalcularVenta(consultaValorVenta, accionesTotalFinal);
         }
     }
 }

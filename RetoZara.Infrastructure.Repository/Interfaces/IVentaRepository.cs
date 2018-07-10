@@ -9,6 +9,8 @@ namespace RetoZara.Infrastructure.Repository.Interfaces
 {
     public interface IVentaRepository
     {
-        Venta Calcular(Venta venta);
+        DateTime Viernes(DateTime dateValue);
+        decimal Acciones(Decimal consultaValorCompra);
+        void CalcularVenta(decimal ValorVenta, decimal totalAcciones);
     }
 }

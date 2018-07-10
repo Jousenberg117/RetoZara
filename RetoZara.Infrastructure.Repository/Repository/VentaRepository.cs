@@ -11,32 +11,24 @@ namespace RetoZara.Infrastructure.Repository.Repository
 {
     public class VentaRepository : IVentaRepository
     {
-        public decimal AccionesTotal { get; set; }
-        public string viernesfecha { get; set; }
-        public DateTime viernesdate { get; set; }
-        public void Viernes(DateTime dateValue)
+        decimal AccionesTotal;
+        DateTime viernesdate;
+        public DateTime Viernes(DateTime dateValue)
         {
             DateTime fecha = Data.GetLastFridayOfTheMonth(dateValue);
             viernesdate = fecha;
-            viernesfecha = fecha.ToString("dd-MMM-yyyy").Replace(".", "");
+            return viernesdate;
         }
 
-        public void Acciones(Decimal consultaValorCompra)
+        public decimal Acciones(Decimal consultaValorCompra)
         {
             decimal Acciones = CalcularCompra.CalcularAcciones(consultaValorCompra);
             AccionesTotal = AccionesTotal + Acciones;
+            return Math.Round(AccionesTotal, 3);
         }
-
-        public decimal CalcularVenta(decimal ValorVenta, decimal totalAcciones)
+        public void CalcularVenta(decimal ValorVenta, decimal totalAcciones)
         {
-            decimal capitalFinal = ValorVenta * totalAcciones;
-            return Math.Round(capitalFinal, 3);
-        }
-
-
-        public Venta Calcular(Venta venta)
-        {
-            throw new NotImplementedException();
+           Venta.capitalFinal = Math.Round((ValorVenta * totalAcciones), 3);
         }
 
     }
