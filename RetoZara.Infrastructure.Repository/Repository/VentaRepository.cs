@@ -11,15 +11,8 @@ namespace RetoZara.Infrastructure.Repository.Repository
 {
     public class VentaRepository : IVentaRepository
     {
-        decimal AccionesTotal;
-        DateTime viernesdate;
-        public DateTime Viernes(DateTime dateValue)
-        {
-            DateTime fecha = Data.GetLastFridayOfTheMonth(dateValue);
-            viernesdate = fecha;
-            return viernesdate;
-        }
-
+        decimal AccionesTotal = 0.000M;
+       
         public decimal Acciones(Decimal consultaValorCompra)
         {
             decimal Acciones = CalcularCompra.CalcularAcciones(consultaValorCompra);

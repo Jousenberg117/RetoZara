@@ -15,12 +15,11 @@ namespace RetoZara.Infrastructure.Repository.Manager
         static string path = ConfigurationManager.AppSettings.Get("path");
         public string consultaValorCompra{ get; set; }
         public string consultaValorVenta { get; set; }
+        public string consultaViernes { get; set; }
 
 
         public void consultaFechaCompra(string date)
         {
-            string consultaViernes;
-
             var reader = new StreamReader(path);
            
             List<string> listA = new List<string>();
@@ -28,6 +27,8 @@ namespace RetoZara.Infrastructure.Repository.Manager
             List<string> listB = new List<string>();
 
             List<string> listC = new List<string>();
+
+
             do
             {
                 var line = reader.ReadLine();
@@ -38,7 +39,7 @@ namespace RetoZara.Infrastructure.Repository.Manager
                 consultaViernes = values[0];
                 consultaValorCompra = values[2];
             }
-            while (consultaViernes.ToString() != date && !reader.EndOfStream || consultaValorCompra == "");   
+            while (consultaViernes.ToString() != date && !reader.EndOfStream);
         }
         public void consultaFechaVenta(string date)
         {

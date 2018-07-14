@@ -12,8 +12,8 @@ namespace RetoZara.Infrastructure.Repository.Repository
         {
             decimal capital = 50.000M;
             decimal comision = 2.000M;
-            decimal inversion = capital - (capital * (comision / 100));
-            decimal totalAccionesCompradas = (Math.Round(inversion, 3) / Math.Round(consultaValorCompra));
+            capital -= capital * (comision / 100);
+            decimal totalAccionesCompradas = (Math.Round(capital, 3) / Math.Round(consultaValorCompra, 3));
             return Math.Round(totalAccionesCompradas, 3);
         }
     }

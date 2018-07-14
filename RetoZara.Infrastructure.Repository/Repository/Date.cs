@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace RetoZara
 {
-    class Data
+    class Date
     {
-        public static DateTime GetLastFridayOfTheMonth(DateTime date)
+        public static DateTime GetLastThursdayOfTheMonth(DateTime date)
         {
             var lastDayOfMonth = new DateTime(date.Year, date.Month, DateTime.DaysInMonth(date.Year, date.Month));
-            while (lastDayOfMonth.DayOfWeek != DayOfWeek.Friday)
+            while (lastDayOfMonth.DayOfWeek != DayOfWeek.Thursday)
                 lastDayOfMonth = lastDayOfMonth.AddDays(-1);
             return lastDayOfMonth;
         }
